@@ -98,8 +98,8 @@
   position: absolute;
   bottom: 0;
   left: 0;
-  -webkit-animation: rotate 3s linear infinite;
-          animation: rotate 3s linear infinite;
+  -webkit-animation: rotate 4.5s linear infinite;
+          animation: rotate 4.5s linear infinite;
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
 }
