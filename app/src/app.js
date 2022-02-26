@@ -44,6 +44,30 @@ function pauseSong() {
     audio.pause()
 }
 
+function prevSong() {
+    songIndex--
+
+    if (songIndex < 0) {
+        songIndex = songs.length -1
+    }
+
+    loadSong(songs[songIndex])
+    
+    playSong()
+}
+
+function nextSong() {
+    songIndex++
+
+    if (songIndex > (songs.length -1)) {
+        songIndex = 0
+    }
+
+    loadSong(songs[songIndex])
+    
+    playSong()
+}
+
 function setProgress(e){
     const width = this.clientWidth
     const clickX = e.offsetX
@@ -67,29 +91,9 @@ playBtn.addEventListener('click', () => {
 
 // Change song events
 
-prevBtn.addEventListener('click', () => {
-    songIndex--
+prevBtn.addEventListener('click', prevSong)
 
-    if (songIndex < 0) {
-        songIndex = songs.length -1
-    }
-
-    loadSong(songs[songIndex])
-    
-    playSong()
-})
-
-nextBtn.addEventListener('click', () => {
-    songIndex++
-
-    if (songIndex > (songs.length -1)) {
-        songIndex = 0
-    }
-
-    loadSong(songs[songIndex])
-    
-    playSong()
-})
+nextBtn.addEventListener('click', nextSong)
 
 audio.addEventListener('timeupdate', (e) => {
     const {duration, currentTime} = e.srcElement
@@ -98,3 +102,5 @@ audio.addEventListener('timeupdate', (e) => {
 })
 
 progressContainer.addEventListener('click', setProgress)
+
+audio.addEventListener('ended', nextSong)
