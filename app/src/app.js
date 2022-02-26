@@ -44,6 +44,14 @@ function pauseSong() {
     audio.pause()
 }
 
+function setProgress(e){
+    const width = this.clientWidth
+    const clickX = e.offsetX
+    const duration = audio.duration
+
+    audio.currentTime = ((clickX / width) * duration)
+}
+
 // Event Listener
 
 playBtn.addEventListener('click', () => {
@@ -88,3 +96,5 @@ audio.addEventListener('timeupdate', (e) => {
     const progressPercent = (currentTime / duration) * 100
     progress.style.width = `${progressPercent}%`
 })
+
+progressContainer.addEventListener('click', setProgress)
