@@ -18,7 +18,45 @@
 </head>
 <body>
 
-    
+    <div class="navbar">
+        <div class="bg-emerald-900 px-3 py-2">
+            <div class="text-left first-letter:font-bold text-5xl text-cyan-50">
+                Sholty
+            </div>
+        </div>
+    </div>
+
+    <div class="music-container container w-2/3 my-3 mx-auto">
+        <div class="music-info">
+            <h4 id="title">
+                Mahmood, BLANCO - Brividi
+            </h4>
+            <div class="progress-container">
+                <div class="progress">
+
+                </div>
+            </div>
+        </div>
+
+        <audio src="/app/media/musics/Brividi-Mahmood-Blanco.mp3" id="audio"></audio>
+
+        <div class="img-container">
+            <img src="/app/media/images/Brividi-Mahmood-Blanco.jpg" alt="music-cover" id="cover" />
+        </div>
+
+        <div class="navigation">
+            <button id="prev" class="action-btn">
+                <i class="fas fa-backward"></i>
+            </button>
+            <button id="play" class="action-btn action-btn-big">
+                <i class="fas fa-play"></i>
+            </button>
+            <button id="next" class="action-btn">
+                <i class="fas fa-forward"></i>
+            </button>
+        </div>
+
+    </div>
 
     <script src="app.js"></script>
 
