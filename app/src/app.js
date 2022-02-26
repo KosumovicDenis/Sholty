@@ -1,4 +1,4 @@
-const multiContainer = document.querySelector('.music-container')
+const musicContainer = document.querySelector('.music-container')
 const playBtn = document.querySelector('#play')
 const prevBtn = document.querySelector('#prev')
 const nextBtn = document.querySelector('#next')
@@ -8,6 +8,43 @@ const progressContainer = document.querySelector('.progress-container')
 const title = document.querySelector('#title')
 const cover = document.querySelector('#cover')
 
-//Song titles
+// Song titles
 
-const songs = ['Mahmood, BLANCO - Brividi']
+const songs = ['Brividi - Mahmood, Blanco', 'Blu Celeste - Blanco', 'Finché non mi seppelliscono - Blanco']
+
+// Keep track of songs
+
+let songIndex = 0
+
+// Initially load song info DOM
+
+loadSong(songs[songIndex])
+
+// Update the song
+
+function loadSong(song){
+    title.innerHTML = song
+    audio.src = `/app/media/musics/${song}.mp3` 
+    cover.src = `/app/media/images/${song}.jpg`
+}
+
+function playSong() {
+    musicContainer.classList.add('play')
+}
+
+function pauseSong() {
+    musicContainer.classList.remove('play')
+}
+
+// Event Listener
+
+playBtn.addEventListener('click', () => {
+    const isPlaying = musicContainer.classList.contains('play')
+
+    if (isPlaying) {
+        pauseSong()
+    } else {
+        playSong()
+    }
+
+})
