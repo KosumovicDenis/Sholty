@@ -30,10 +30,18 @@ function loadSong(song){
 
 function playSong() {
     musicContainer.classList.add('play')
+    playBtn.querySelector('i.fas').classList.remove('fa-play')
+    playBtn.querySelector('i.fas').classList.add('fa-pause')
+
+    audio.play()
 }
 
 function pauseSong() {
     musicContainer.classList.remove('play')
+    playBtn.querySelector('i.fas').classList.add('fa-play')
+    playBtn.querySelector('i.fas').classList.remove('fa-pause')
+
+    audio.pause()
 }
 
 // Event Listener
@@ -47,4 +55,30 @@ playBtn.addEventListener('click', () => {
         playSong()
     }
 
+})
+
+// Change song events
+
+prevBtn.addEventListener('click', () => {
+    songIndex--
+
+    if (songIndex < 0) {
+        songIndex = songs.length -1
+    }
+
+    loadSong(songs[songIndex])
+    
+    playSong()
+})
+
+nextBtn.addEventListener('click', () => {
+    songIndex++
+
+    if (songIndex > (songs.length -1)) {
+        songIndex = 0
+    }
+
+    loadSong(songs[songIndex])
+    
+    playSong()
 })
