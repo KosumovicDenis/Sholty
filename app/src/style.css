@@ -1,1 +1,14 @@
-/* No CSS *//*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(23.8%, #064e3b), color-stop(92%, #064e3b));
+  background-image: linear-gradient(0deg, #064e3b 23.8%, #064e3b 92%);
+}
+/*# sourceMappingURL=style.css.map */

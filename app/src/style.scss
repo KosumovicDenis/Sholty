@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    box-sizing: border-box;
+    body{
+        height: 100vh;
+        margin: 0;
+        font-family: 'Lato', sans-serif;
+        background-image: linear-gradient(
+            0deg,
+            rgb(6, 78, 59) 23.8%,
+            rgb(6, 78, 59) 92%
+            );
+    }
+}
