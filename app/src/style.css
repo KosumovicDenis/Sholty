@@ -56,6 +56,10 @@
   transition: transform 0.3s ease-in, opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 
+* body .music-container .music-info h4 {
+  margin: 0;
+}
+
 * body .music-container.play .music-info {
   opacity: 1;
   -webkit-transform: translateY(-100%);
@@ -130,6 +134,24 @@
 * body .music-container .navigation .action-btn.action-btn-big {
   color: #cdc2d0;
   font-size: 30px;
+}
+
+* body .music-container .progress-container {
+  background: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  height: 4px;
+  width: 100%;
+}
+
+* body .music-container .progress-container .progress {
+  background: #fe8daa;
+  border-radius: 5px;
+  height: 100%;
+  width: 0%;
+  -webkit-transition: width 0.1s linear;
+  transition: width 0.1s linear;
 }
 
 @-webkit-keyframes rotate {
