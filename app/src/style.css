@@ -30,7 +30,7 @@
   font-size: calc(1em + 20vw);
   font-weight: 900;
   text-shadow: -0.0075em 0.0075em 0 #fef2f6, 0.005em 0.005em 0 #f6a5c1, 0.01em 0.01em 0 #f7aac4, 0.015em 0.015em #f7aec7, 0.02em 0.02em 0 #f8b3ca, 0.025em 0.025em 0 #f8b7cd, 0.03em 0.03em 0 #f8bcd0, 0.035em 0.035em 0 #f9c0d3;
-  font-size: 12rem;
+  font-size: 8rem;
 }
 
 * body .music-container {
@@ -142,6 +142,77 @@
 * body .music-container .navigation .action-btn.action-btn-big {
   color: #cdc2d0;
   font-size: 30px;
+}
+
+* body .music-container .navigation .action-btn .bar {
+  display: none;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px 15px 15px 15px;
+  opacity: 0;
+  padding: 10px 10px 10px 10px;
+  top: 0;
+  right: 0px;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+  transition: transform 0.3s ease-in, opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
+}
+
+* body .music-container .navigation button#volume {
+  font-size: 15px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+* body .music-container .navigation button#volume:hover {
+  font-size: 25px;
+}
+
+* body .music-container .navigation button#volume:hover .bar {
+  display: block;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 1;
+}
+
+* body .music-container .navigation button#volume:hover .bar input {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: rgba(255, 255, 255, 0.5);
+  border: #cdc2d0 1px solid;
+  padding: 1px;
+  border-radius: 15px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  -webkit-transition: opacity .2s;
+  transition: opacity .2s;
+}
+
+* body .music-container .navigation button#volume:hover .bar input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 45%;
+  background: #f6a5c1;
+  cursor: pointer;
+}
+
+* body .music-container .navigation button#volume:hover .bar input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 45%;
+  background: #f6a5c1;
+  cursor: pointer;
+}
+
+* body .music-container .navigation button#volume:hover .bar input:hover {
+  opacity: 1;
 }
 
 * body .music-container .progress-container {

@@ -28,7 +28,7 @@
                 0.025em 0.025em 0 mix(#fff, #e91e63, 68%),
                 0.03em 0.03em 0 mix(#fff, #e91e63, 70%),
                 0.035em 0.035em 0 mix(#fff, #e91e63, 72%);
-                font-size: 12rem;
+                font-size: 8rem;
         }
         .music-container{
             background: #fff;
@@ -110,6 +110,64 @@
                     &.action-btn-big{
                         color: #cdc2d0;
                         font-size: 30px;
+                    }
+                    & .bar{
+                        display: none;
+                        position: absolute;
+                        background: rgba(255, 255, 255, 0.5);
+                        border-radius: 15px 15px 15px 15px;
+                        opacity: 0;
+                        padding: 10px 10px 10px 10px;
+                        top: 0;
+                        right: 0px;
+                        transform: translateY(0%);
+                        transition: transform 0.3s ease-in, opacity 0.3s ease-in;
+                        input{
+                        }
+                    }
+                }
+                button#volume{
+                    font-size: 15px;
+                    transition: .5s;
+                    &:hover{
+                        font-size: 25px;
+                        .bar{
+                            display: block;
+                            transform: translateY(-50%);
+                            opacity: 1;
+                            input{
+                                -webkit-appearance: none;
+                                width: 100%;
+                                height: 25px;
+                                background: rgba(255, 255, 255, 0.5);
+                                border: #cdc2d0 1px solid;
+                                padding: 1px;
+                                border-radius: 15px;
+                                outline: none;
+                                opacity: 0.7;
+                                -webkit-transition: .2s;
+                                transition: opacity .2s;
+                                &::-webkit-slider-thumb {
+                                    -webkit-appearance: none;
+                                    appearance: none;
+                                    width: 20px;
+                                    height: 20px;
+                                    border-radius: 45%;
+                                    background: mix(#fff, #e91e63, 60%);
+                                    cursor: pointer;
+                                }
+                                &::-moz-range-thumb {
+                                    width: 20px;
+                                    height: 20px;
+                                    border-radius: 45%;
+                                    background: mix(#fff, #e91e63, 60%);
+                                    cursor: pointer;
+                                }
+                                &:hover{
+                                    opacity: 1;
+                                }
+                            }
+                        }
                     }
                 }
             }
