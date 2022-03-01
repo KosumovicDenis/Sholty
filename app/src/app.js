@@ -7,6 +7,10 @@ const progress = document.querySelector('.progress')
 const progressContainer = document.querySelector('.progress-container')
 const title = document.querySelector('#title')
 const cover = document.querySelector('#cover')
+const volume_bar = document.getElementById("volume_bar")
+const volume_icon = document.getElementById("volume_icon")
+
+audio.volume = volume_bar.value / 100
 
 // Song titles
 
@@ -88,6 +92,23 @@ playBtn.addEventListener('click', () => {
     }
 
 })
+
+volume_bar.addEventListener('input', () => {
+    audio.volume = volume_bar.value / 100
+/*
+    if (volume_bar.value > 30) {
+        volume_icon.innerHTML = "<i class='fa-solid fa-volume-high'></i>"
+    } else if (volume_bar.value < 15 && volume_bar.value != 0) {
+        volume_icon.innerHTML = "<i class='fa-solid fa-volume-low'></i>"
+    } else if (volume_bar.value <= 30 && volume_bar.value >= 15) {
+        volume_icon.innerHTML = "<i class='fa-regular fa-speaker'></i>"
+    }
+    else {
+        volume_icon.innerHTML = "<i class='fa-solid fa-volume-xmark'></i>"
+    }
+
+    console.log(volume_icon.innerHTML)*/
+} )
 
 // Change song events
 
