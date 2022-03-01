@@ -161,24 +161,7 @@
   transition: transform 0.3s ease-in, opacity 0.3s ease-in, -webkit-transform 0.3s ease-in;
 }
 
-* body .music-container .navigation button#volume {
-  font-size: 15px;
-  -webkit-transition: .5s;
-  transition: .5s;
-}
-
-* body .music-container .navigation button#volume:hover {
-  font-size: 25px;
-}
-
-* body .music-container .navigation button#volume:hover .bar {
-  display: block;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  opacity: 1;
-}
-
-* body .music-container .navigation button#volume:hover .bar input {
+* body .music-container .navigation .action-btn .bar input {
   -webkit-appearance: none;
   width: 100%;
   height: 25px;
@@ -193,7 +176,7 @@
   transition: opacity .2s;
 }
 
-* body .music-container .navigation button#volume:hover .bar input::-webkit-slider-thumb {
+* body .music-container .navigation .action-btn .bar input::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
@@ -203,7 +186,7 @@
   cursor: pointer;
 }
 
-* body .music-container .navigation button#volume:hover .bar input::-moz-range-thumb {
+* body .music-container .navigation .action-btn .bar input::-moz-range-thumb {
   width: 20px;
   height: 20px;
   border-radius: 45%;
@@ -211,7 +194,24 @@
   cursor: pointer;
 }
 
-* body .music-container .navigation button#volume:hover .bar input:hover {
+* body .music-container .navigation .action-btn .bar input:hover {
+  opacity: 1;
+}
+
+* body .music-container .navigation button#volume {
+  font-size: 15px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+* body .music-container .navigation button#volume:hover {
+  font-size: 25px;
+}
+
+* body .music-container .navigation button#volume:hover .bar {
+  display: block;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
   opacity: 1;
 }
 
