@@ -1,5 +1,12 @@
-# Sholty
+# Sholty - Music Player
 
-## Music player
+Sholty is a responsive demo music player. 
 
-### There are three Blanco's songs you can listen to.
+## Features
+
+Currently there are just few features:
+
+- Volume adjustment
+- songs selection
+
+> Abandoned project
